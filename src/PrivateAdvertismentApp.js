@@ -41,18 +41,20 @@ function PrivateApp() {
      
       <div className="bg-slate-500">
         <Popup 
-          headline='Welcome to Talent Building Academy'
+          headline='Welcome to '
+          webName='Talent Building Academy'
           paragraph="পদার্থ , রসায়ন এবং গণিত MCQ এ পরিপূর্ণ প্রস্তুতির জন্য। "
-          extraMessage="ওয়েব সাইটের কাজ এখনো চলমান। তাই অনেক ভর্তি প্রক্রিয়া সহ যোগাযোগের মত বিষয়গুলো কাজ করবেনা। ওয়েবসাইটের নিচের দিকে যোগাযোগের তথ্য দেয়া হয়েছে।"
-          imgLink='https://i.ibb.co.com/99RN1XPM/me3-removebg-preview.png'
+          extraMessage="ওয়েব সাইটের কাজ এখনো চলমান। জরুরী প্রয়োজনে যোগাযোগঃ 01701906543"
+          imgLink='https://i.ibb.co.com/LdPRBF5P/me4-Edited.png' 
           open={close}
           setOpen={setClose}
         />
         <HeroSection/>
-        <PhysicsRoadmap />
+        
       </div>
         <Sutdents />
         <PreviousStudents/>
+        <PhysicsRoadmap />
         <Contact/>
         {/* <Testimonials/> */}
 

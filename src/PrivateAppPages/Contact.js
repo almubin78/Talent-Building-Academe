@@ -24,7 +24,7 @@ const Contact = () => {
         {/* Heading */}
         <div className="text-center mb-14">
           <span className="inline-block bg-cyan-500/20 border border-cyan-400/20 text-cyan-300 px-5 py-2 rounded-full text-sm font-medium">
-            যোগাযোগ করুন
+            যোগাযোগ
           </span>
 
           <h2 className="mt-5 text-4xl md:text-5xl font-extrabold text-white">
@@ -58,7 +58,7 @@ const Contact = () => {
                 <div className="absolute inset-0 rounded-full bg-cyan-400 blur-2xl opacity-30"></div>
 
                 <img
-                  src="https://i.ibb.co.com/99RN1XPM/me3-removebg-preview.png"
+                  src="https://i.ibb.co.com/LdPRBF5P/me4-Edited.png"
                   alt="Profile"
                   className="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-2xl"
                 />

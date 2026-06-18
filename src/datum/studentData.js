@@ -3,7 +3,7 @@ export const studentsData = {
     {
       id: 1,
       name: "Kousik",
-      roll: "",
+      batchTime: "7 am to 8 am",
       class_name: "দশম",
       imgLink: "https://i.ibb.co/tD1gX3b/kousik.png",
       joinYear: "2024-৮ম শ্রেণি",
@@ -14,7 +14,7 @@ export const studentsData = {
     {
       id: 2,
       name: "Moursalin",
-      roll: "",
+      batchTime: "7 am to 8 am",
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/jPPGcs4C/mursalin.jpg",
       joinYear: "2024-৮ম শ্রেণি",
@@ -24,7 +24,7 @@ export const studentsData = {
     {
       id: 3,
       name: "Shimul",
-      roll: "",
+      batchTime: "7 am to 8 am",
       class_name: "দশম",
       imgLink: "",
       joinYear: "2024-৮ম শ্রেণি",
@@ -34,7 +34,7 @@ export const studentsData = {
     {
       id: 4,
       name: "Mottalib",
-      roll: "",
+      batchTime: "7 am to 8 am",
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/ynXnSZN/mottalib.jpg",
       joinYear: "2024-৮ম শ্রেণি",
@@ -44,7 +44,7 @@ export const studentsData = {
     {
       id: 5,
       name: "Soyaib",
-      roll: "",
+      batchTime: "7 am to 8 am",
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/WN4SLp4j/souib.jpg",
       joinYear: "2024-৮ম শ্রেণি",
@@ -54,9 +54,9 @@ export const studentsData = {
     {
       id: 6,
       name: "Murad",
-      roll: "",
+      batchTime: "7 am to 8 am",
       class_name: "দশম",
-      imgLink: "",
+      imgLink: "https://i.ibb.co.com/rR66x3gH/murad9.jpg",
       joinYear: "2024-৮ম শ্রেণি",
       subject: "Physics,Chemistry",
       institutionName: "সাকসেস মডেল স্কুল (নতুন)",
@@ -64,7 +64,7 @@ export const studentsData = {
     {
       id: 7,
       name: "Hridoy",
-      roll: "",
+      batchTime: "7 am to 8 am",
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/nqYH65R5/ridoy.jpg",
       joinYear: "2024-৮ম শ্রেণি",
@@ -74,7 +74,7 @@ export const studentsData = {
     {
       id: 8,
       name: "Imran",
-      roll: "",
+      batchTime: "8 am to 9 am",
       class_name: "দশম",
       imgLink: "",
       joinYear: "2026-April",
@@ -84,9 +84,9 @@ export const studentsData = {
     {
       id: 9,
       name: "Abdur Rahman",
-      roll: "https://i.ibb.co.com/fYmGBCdD/ab-Rahman10.jpg",
+      batchTime: "8 am to 9 am",
       class_name: "দশম",
-      imgLink: "",
+      imgLink: "https://i.ibb.co.com/ZpTkcJpJ/Rohman10.jpg",
       joinYear: "2026-April",
       subject: "Physics,Chemistry",
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
@@ -94,19 +94,48 @@ export const studentsData = {
     {
       id: 10,
       name: "Tamim",
-      roll: "",
+      batchTime: "8 am to 9 am",
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/fMQcqkQ/tamim2.png",
       joinYear: "2024-অষ্টম",
       subject: "Physics,Math",
       institutionName: "পলিটেকনিক স্কুল & কলেজ। ",
     },
+    {
+      id: 11,
+      name: "Riyad",
+      batchTime: "8 am to 9 am",
+      class_name: "দশম",
+      imgLink: "https://i.ibb.co.com/x8tzwTnX/riyad10.jpg",
+      joinYear: "2026-Feb",
+      subject: "Physics, Chemistry, Math MCQ",
+      institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
+    },
+    {
+      id: 12,
+      name: "Sojib",
+      batchTime: "8 am to 9 am",
+      class_name: "দশম",
+      imgLink: "",
+      joinYear: "2026-Feb",
+      subject: "Physics, Chemistry, Math MCQ",
+      institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
+    },
+    {
+      id: 13,
+      name: "Miraz",
+      batch: "দশম ",
+      imgLink: "https://i.ibb.co.com/nCVYVGz/miraz.jpg",
+      joinYear: "2024",
+      subject: "Physics",
+      institutionName: "আলোর মেলা শিশু নিকেতন।",
+    },
   ],
   Nine: [
     {
       id: 1,
       name: "Jahid",
-      roll: "",
+      batchTime: "9 am to 10 am",
       class_name: "নবম",
       imgLink: "https://i.ibb.co.com/hFDLdbwc/jahid-Hasan-At9.jpg",
       joinYear: "২০২৬-ফেব্রুয়ারী",
@@ -117,7 +146,7 @@ export const studentsData = {
     {
       id: 2,
       name: "Noyon Kumar",
-      roll: "",
+      batchTime: "9 am to 10 am",
       class_name: "নবম",
       imgLink: "https://i.ibb.co.com/XkMdGnQM/noyon-Kumar.jpg",
       joinYear: "২০২৬-ফেব্রুয়ারী",
@@ -127,7 +156,7 @@ export const studentsData = {
     {
       id: 3,
       name: "Abdul Ahad",
-      roll: "",
+      batchTime: "9 am to 10 am",
       class_name: "নবম",
       imgLink: "https://i.ibb.co.com/Y4sYqgt6/ab-ahad.jpg",
       joinYear: "২০২৬-মে",
@@ -137,7 +166,7 @@ export const studentsData = {
     {
       id: 4,
       name: "Monowar",
-      roll: "",
+      batchTime: "9 am to 10 am",
       class_name: "নবম",
       imgLink: "https://i.ibb.co.com/27Sd51WF/monowar.jpg",
       joinYear: "২০২৬-ফেব্রুয়ারী",
@@ -147,7 +176,7 @@ export const studentsData = {
     {
       id: 5,
       name: "Tasin [Lamiya]",
-      roll: "",
+      batchTime: "4:45 pm to 5:45 pm",
       class_name: "নবম",
       imgLink: " ",
       joinYear: "২০২৫-এপ্রিল- অষ্টম শ্রেণি",
@@ -157,19 +186,80 @@ export const studentsData = {
     {
       id: 6,
       name: "Bulbul",
-      roll: "",
+      batchTime: "5:45 pm to 6:45 pm",
       class_name: "নবম",
-      imgLink: " ",
+      imgLink: "https://i.ibb.co.com/99b41xQP/bulbul9.jpg",
       joinYear: "২০২৬-মে",
       subject: "গণিত ও বিজ্ঞান ।",
       institutionName: "নাকাইহাট দ্বি-মুখী মাধ্যমিক বিদ্যালয়।",
     },
+    {
+      id: 7,
+      name: "Golap",
+      batchTime: "5:45 pm to 6:45 pm",
+      class_name: "নবম",
+      imgLink: " ",
+      joinYear: "২০২৬-জুন",
+      subject: "গণিত ও বিজ্ঞান ।",
+      institutionName: "নাকাইহাট দ্বি-মুখী মাধ্যমিক বিদ্যালয়।",
+    },
+    {
+      id: 8,
+      name: "Faruk",
+      batchTime: "9 am to 10 am",
+      class_name: "নবম",
+      imgLink: " ",
+      joinYear: "২০২৬-জুন",
+      subject: "পদার্থ, রসায়ন",
+      institutionName: "নাকাইহাট দ্বি-মুখী মাধ্যমিক বিদ্যালয়।",
+    },
+    {
+      id: 9,
+      name: "Jannatul Mawa",
+      batchTime: "4:45 pm to 5:45 pm",
+      class_name: "নবম",
+      imgLink: " ",
+      joinYear: "২০২৬-জুন",
+      subject: "গণিত ",
+      institutionName: "নাকাইহাট গার্লস স্কুল  এন্ড কলেজ।",
+    },
+    {
+      id: 10,
+      name: "Mukta",
+      batchTime: "9 am to 10 am",
+      class_name: "নবম",
+      imgLink: " ",
+      joinYear: "২০২৬-জুন",
+      subject: "পদার্থ, রসায়ন & গণিত- MCQ",
+      institutionName: "নাকাইহাট গার্লস স্কুল  এন্ড কলেজ।",
+    },
+    {
+      id: 11,
+      name: "Atifa",
+      batchTime: "9 am to 10 am",
+      class_name: "নবম",
+      imgLink: " ",
+      joinYear: "২০২৬-জুন",
+      subject: "পদার্থ, রসায়ন & গণিত- MCQ",
+      institutionName: "নাকাইহাট গার্লস স্কুল  এন্ড কলেজ।",
+    },
+    {
+      id: 12,
+      name: "Aysha",
+      batchTime: "9 am to 10 am",
+      class_name: "নবম",
+      imgLink: " ",
+      joinYear: "২০২৬-জুন",
+      subject: "পদার্থ, রসায়ন & গণিত- MCQ",
+      institutionName: "নাকাইহাট গার্লস স্কুল  এন্ড কলেজ।",
+    },
+    
   ],
   Eight: [
     {
       id: 1,
       name: "Md Ibrahim",
-      roll: "9",
+      batchTime: "5:45 pm to 6:45 pm",
       class_name: "অষ্টম",
       imgLink: "https://i.ibb.co.com/xxW1txy/ibrahim-8-2.jpg",
       joinYear: "2025 -শ্রেনি-৭ম",
@@ -179,7 +269,7 @@ export const studentsData = {
     {
       id: 2,
       name: "Rifa",
-      roll: "6",
+      batchTime: "4:45 pm to 5:45 pm",
       class_name: "অষ্টম",
       imgLink: "https://i.ibb.co.com/gZd8Vg9H/rifa.jpg",
       joinYear: "2026 -শ্রেনি-৮ম",
@@ -189,7 +279,7 @@ export const studentsData = {
     {
       id: 3,
       name: "Sagorika",
-      roll: "3",
+      batchTime: "4:45 pm to 5:45 pm",
       class_name: "অষ্টম",
       imgLink: "https://i.ibb.co.com/v4sYNf6x/sagorika.jpg",
       joinYear: "2025 -শ্রেনি-৭ম",
@@ -199,7 +289,7 @@ export const studentsData = {
     {
       id: 4,
       name: "Bonna",
-      roll: "01",
+      batchTime: "4:45 pm to 5:45 pm",
       class_name: "অষ্টম",
       imgLink: "",
       joinYear: "2025 -শ্রেনি-৭ম",
@@ -209,19 +299,19 @@ export const studentsData = {
     {
       id: 5,
       name: "Mim",
-      roll: "",
+      batchTime: "4:45 pm to 5:45 pm",
       class_name: "অষ্টম",
       imgLink: "https://i.ibb.co.com/svFGRBNc/mim.jpg",
-      joinYear: "2026 -শ্রেনি-৮ম",
+      joinYear: "2026 -শ্রেনি-৮ম", 
       subject: "গণিত, বিজ্ঞান,গ্রামার",
       institutionName: "পশ্চিম পগইল দাখিল মাদ্রাসা",
     },
     {
       id: 6,
       name: "Likhon",
-      roll: "",
+      batchTime: "5:45 pm to 6:45 pm",     
       class_name: "অষ্টম",
-      imgLink: "",
+      imgLink: "https://i.ibb.co.com/Cp4pYgTQ/Likhon8.jpg",
       joinYear: "2026 -শ্রেনি-৮ম",
       subject: "গণিত, বিজ্ঞান,গ্রামার",
       institutionName: "পশ্চিম পগইল দাখিল মাদ্রাসা",
@@ -229,13 +319,14 @@ export const studentsData = {
     {
       id: 7,
       name: "Rifat",
-      roll: "",
+      batchTime: "5:45 pm to 6:45 pm",     
       class_name: "অষ্টম",
-      imgLink: "https://i.ibb.co.com/DD0jfXYK/rifat.jpg",
+      imgLink: "https://i.ibb.co.com/SDchLbFT/rifat8.jpg",
       joinYear: "2025 -শ্রেনি-৭ম",
       subject: "গণিত, বিজ্ঞান,গ্রামার",
       institutionName: "পশ্চিম পগইল দাখিল মাদ্রাসা",
     },
+    
   ],
 };
 
@@ -319,15 +410,7 @@ export const PreviousStudentsData = {
       subject: "Physics",
       institutionName: "সাকসেস মডেল স্কুল (নতুন)",
     },
-     {
-      id: 8,
-      name: "Miraz",
-      batch: "অষ্টম [২০২৪]",
-      imgLink: "https://i.ibb.co.com/nCVYVGz/miraz.jpg",
-      joinYear: "2024",
-      subject: "Physics",
-      institutionName: "আলোর মেলা শিশু নিকেতন।",
-    },
+     
     {
       id: 5,
       name: "Mohon",
@@ -391,34 +474,16 @@ export const PreviousStudentsData = {
       subject: "",
       institutionName: "SKS School and Collage",
     },
+    {
+      id: 7,
+      name: "Bayezid",
+      batchTime: "5:45 pm to 6:45 pm",     
+      batch: "অষ্টম",
+      imgLink: "https://i.ibb.co.com/YBVN55ph/bayzid8.jpg",
+      joinYear: "2025 -শ্রেনি-৭ম",
+      subject: "গণিত, বিজ্ঞান,গ্রামার",
+      institutionName: "নাকাই হাট দ্বি-মুখী মাধ্যমিক বিদ্যালয়।",
+    },
   ],
-  Eight: [
-    // { id: 4, name: "Bayezid", batch:"অষ্টম [২০২৬]",imgLink: "" ,joinYear:'',subject:"",institutionName:"নাকাইহাট দ্বি-মুখী মাধ্যমিক বিদ্যালয়।"},
-    // { id: 1, name: "Asha Moni", batch:"অষ্টম [২০২৫]",imgLink: " " ,joinYear:'',subject:"",institutionName:""}
-  ],
-
-  // Eight: [],
-  Nine: [
-   
-
-    // { id: 9, name: "Ela Moni", batch:" [২০২৫]",imgLink: "" ,joinYear:'',subject:"",institutionName:"নাকাইহাট দ্বি-মুখী মাধ্যমিক বিদ্যালয়।"},
-    // {
-    //   id: 4,
-    //   name: "Toufik",
-    //   batch: " [২০২৫]",
-    //   imgLink: " ",
-    //   joinYear: "",
-    //   subject: "",
-    //   institutionName: "পশ্চিম পগইল দাখিল মাদ্রাসা",
-    // },
-    
-  ],
-  // Eight: [],
-  Ten: [
-    
-  ],
-  // Eight: [],
-  HSC: [
-   
-  ],
+  
 };

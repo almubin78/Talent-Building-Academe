@@ -94,10 +94,10 @@ const PreviousStudents = () => {
             </span>
           </h2>
 
-          <p className="mt-5 text-slate-300 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+          {/* <p className="mt-5 text-slate-300 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
             ধারাবাহিক গাইডলাইন, অনুশীলন এবং সঠিক প্রস্তুতির মাধ্যমে
             শিক্ষার্থীদের সফলতার পথে এগিয়ে নেওয়া হয়।
-          </p>
+          </p> */}
         </div>
 
         {/* Loading */}
@@ -139,7 +139,7 @@ const PreviousStudents = () => {
                             : "https://i.ibb.co.com/LzN9NS0z/default.png"
                         }
                         alt={student.name}
-                        className="relative w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-white shadow-2xl"
+                        className="font-elegant relative w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-white shadow-2xl"
                       />
 
                       {/* Success Badge */}
@@ -210,9 +210,9 @@ const PreviousStudents = () => {
                     </div>
 
                     {/* Bottom Button */}
-                    <button className="mt-7 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 rounded-2xl shadow-xl transition-all duration-300">
+                    {/* <button className="mt-7 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 rounded-2xl shadow-xl transition-all duration-300">
                       শিক্ষার্থীর মতামত
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

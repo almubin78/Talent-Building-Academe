@@ -1,7 +1,7 @@
 
 import { X } from "lucide-react";
 
-const Popup = ({open,setOpen,headline,paragraph,imgLink,extraMessage}) => {
+const Popup = ({open,setOpen,headline,paragraph,imgLink,extraMessage,webName}) => {
   
 
   if (!open) return null;
@@ -9,7 +9,7 @@ const Popup = ({open,setOpen,headline,paragraph,imgLink,extraMessage}) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
       {/* Popup Box */}
-      <div className="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl animate-in fade-in zoom-in duration-300">
+      <div className="bg-red-100 relative w-full max-w-md rounded-2xl  p-6 shadow-2xl animate-in fade-in zoom-in duration-300">
         
         {/* Close Button */}
         <button
@@ -28,15 +28,19 @@ const Popup = ({open,setOpen,headline,paragraph,imgLink,extraMessage}) => {
           />
 
           <h2 className="mt-4 text-2xl font-bold text-gray-800">
-            {headline}
+            {headline} <span className="text-blue-600">{webName}</span>
           </h2>
 
           <p className="mt-2 text-gray-600">
             {paragraph}
           </p> <br />
-          <p className="mt-2 text-red-500 text-xl ">
+          <div className="border-t-2 border-gray-300 my-4">
+            <p className="mt-2 text-gray-600 text-xl ">
             {extraMessage}
           </p>
+          </div>
+
+
 
           {/* <button id="contact" className="mt-6 rounded-lg bg-blue-600 px-5 py-3 text-white hover:bg-blue-700 transition">
             Contact Now

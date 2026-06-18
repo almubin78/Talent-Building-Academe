@@ -107,17 +107,17 @@ const Students = () => {
               </span>
             </h2>
 
-            <p className="text-slate-300 mt-4 max-w-2xl leading-relaxed">
+            {/* <p className="text-slate-300 mt-4 max-w-2xl leading-relaxed">
               প্রতিটি শিক্ষার্থীকে ব্যক্তিগতভাবে গাইডলাইন এবং
               ব্যাসিক থেকে বোর্ড প্রশ্ন পর্যন্ত ধাপে ধাপে প্রস্তুত করা হয়।
-            </p>
+            </p> */}
           </div>
 
           {/* Filter */}
           <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-5 shadow-2xl">
             
             <label className="block text-slate-300 mb-3 font-medium">
-              শ্রেণি নির্বাচন করুন
+              শ্রেণি নির্বাচন কর
             </label>
 
             <select
@@ -193,7 +193,7 @@ const Students = () => {
   <div className="p-4 md:p-7 text-center relative z-10">
     
     {/* Name */}
-    <h3 className="text-xl md:text-2xl font-bold text-white">
+    <h3 className="font-classic  text-2xl md:text-2xl font-bold text-white ">
       {student.name}
     </h3>
 
@@ -240,20 +240,34 @@ const Students = () => {
 
         <div>
           <p className="text-slate-400 text-xs">
-            ভর্তির সাল
+            Batch Time:  
+          </p>
+
+          <h4 className="text-white text-sm font-semibold">
+            {student.batchTime}
+          </h4>
+        </div>
+      </div>
+      {/* Year
+      <div className="flex items-start gap-3 bg-white/5 rounded-2xl p-3">
+        <CalendarDays className="text-yellow-300 mt-1" size={18} />
+
+        <div>
+          <p className="text-slate-400 text-xs">
+            ভর্তির তথ্যঃ 
           </p>
 
           <h4 className="text-white text-sm font-semibold">
             {student.joinYear}
           </h4>
         </div>
-      </div>
+      </div> */}
     </div>
 
     {/* Button */}
-    <button className="mt-5 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white text-sm md:text-base font-semibold py-3 rounded-2xl transition duration-300 shadow-lg">
+    {/* <button className="mt-5 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white text-sm md:text-base font-semibold py-3 rounded-2xl transition duration-300 shadow-lg">
       শিক্ষার্থীর মতামত 
-    </button>
+    </button> */}
   </div>
 </div>
               </div>
