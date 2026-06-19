@@ -84,15 +84,15 @@ const PreviousStudents = () => {
           
           <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-400/20 px-5 py-2 rounded-full text-cyan-300 text-sm font-medium">
             <Sparkles size={16} />
-            শিক্ষার্থীদের একাংশ
+            পূর্বের  শিক্ষার্থীদের একাংশ
           </div>
 
-          <h2 className="mt-5 text-3xl md:text-5xl font-extrabold text-white">
+          {/* <h2 className="mt-5 text-3xl md:text-5xl font-extrabold text-white">
             পূর্বের
             <span className="text-cyan-400 ml-3">
               ছাত্র/ছাত্রী
             </span>
-          </h2>
+          </h2> */}
 
           {/* <p className="mt-5 text-slate-300 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
             ধারাবাহিক গাইডলাইন, অনুশীলন এবং সঠিক প্রস্তুতির মাধ্যমে

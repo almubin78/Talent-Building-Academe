@@ -129,8 +129,8 @@ const HeroSection = () => {
 
                       {/* Button */}
                       <div className="mt-7">
-                        <button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white px-6 py-3 rounded-2xl font-semibold transition shadow-lg">
-                          যোগাযোগ কর
+                        <button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-500 hover:to-cyan-400 text-white px-6 py-3 rounded-2xl font-semibold transition shadow-lg">
+                          যোগাযোগ: <span className="text-pink-300 font-mono text-lg">017-019-06543</span>  
                         </button>
                       </div>
                     </div>

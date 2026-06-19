@@ -9,67 +9,93 @@ import {
   GraduationCap,
   BookOpen,
   MessageCircle,
+  CheckCircle,
+  XCircle,
+  Loader2,
 } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
   const [submitStatus, setSubmitStatus] = useState({ type: "", text: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const { name, phone, message } = formData;
+    const { name, phone, message } = formData;
 
-  if (!name.trim() || !phone.trim() || !message.trim()) {
-    return setSubmitStatus({
-      type: "error",
-      text: "অনুগ্রহ করে সব ফিল্ড পূরণ করো।",
-    });
-  }
+    // Validation
+    if (!name.trim() || !phone.trim() || !message.trim()) {
+      setSubmitStatus({
+        type: "error",
+        text: "⚠️ অনুগ্রহ করে সব ফিল্ড পূরণ করো।",
+      });
+      return;
+    }
 
-  if (!/^01\d{9}$/.test(phone.trim())) {
-    return setSubmitStatus({
-      type: "error",
-      text: "সঠিক ১১ সংখ্যার মোবাইল নম্বর দাও।",
-    });
-  }
-  console.log(formData,'formData');
+    if (!/^01\d{9}$/.test(phone.trim())) {
+      setSubmitStatus({
+        type: "error",
+        text: "⚠️ সঠিক ১১ সংখ্যার মোবাইল নম্বর দাও (01XXXXXXXXX)।",
+      });
+      return;
+    }
 
-  try {
-    const res = await fetch("http://localhost:5000/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await res.json();
-
-    if (!res.ok) throw new Error(data.message);
-
+    // Start submitting
+    setIsSubmitting(true);
     setSubmitStatus({
-      type: "success",
-      text: "তোমার মেসেজ পাঠানো হয়েছে।",
+      type: "loading",
+      text: "⏳ মেসেজ পাঠানো হচ্ছে...",
     });
 
-    setFormData({
-      name: "",
-      phone: "",
-      message: "",
-    });
-  } catch (err) {
-    setSubmitStatus({
-      type: "error",
-      text: err.message || "কিছু সমস্যা হয়েছে।",
-    });
-  }
-};
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      // if (!res.ok) throw new Error(data.message || "কিছু সমস্যা হয়েছে");
+      if (!res.ok) throw new Error( "কিছু সমস্যা হয়েছে");
+
+      // Success
+      setSubmitStatus({
+        type: "success",
+        text: "✅ তোমার মেসেজ সফলভাবে পাঠানো হয়েছে! আমরা খুব শীঘ্রই তোমার সাথে যোগাযোগ করব।",
+      });
+
+      // Clear form
+      setFormData({
+        name: "",
+        phone: "",
+        message: "",
+      });
+      
+      setIsSubmitting(false);
+
+      // Auto-clear success message after 6 seconds
+      setTimeout(() => {
+        setSubmitStatus({ type: "", text: "" });
+      }, 6000);
+
+    } catch (err) {
+      setSubmitStatus({
+        type: "error",
+        // text: `❌ ${err.message || "কিছু সমস্যা হয়েছে। আবার চেষ্টা করো।"}`,
+        text: `❌ ${ "এই সেকশনের কাজ সম্পন্ন করিনি। ফোন নাম্বারে যোগাযোগ করো।"}`,
+      });
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 py-20 px-4">
@@ -86,16 +112,21 @@ const handleSubmit = async (e) => {
             যোগাযোগ
           </span>
 
-          <h2 className="mt-5 text-4xl md:text-5xl font-extrabold text-white">
+          <h2 className="mt-5 text-2xl md:text-5xl font-extrabold text-white">
             তোমার শেখার
             <span className="text-cyan-400 ml-3">
               যাত্রা শুরু হোক
-            </span>
-          </h2>
+            </span> 
 
+            <h1 className="text-slate-400 ml-3">
+              সহজ , সরল এবং সিম্পল উপায়ে। 
+            </h1>
+          </h2>
+          <div className="divider"></div>
+        
           <p className="text-slate-300 mt-5 max-w-2xl mx-auto leading-relaxed">
             Physics, Chemistry এবং Math সহজভাবে বুঝতে এবং
-            আত্মবিশ্বাসের সাথে প্রস্তুতি নিতে  যোগাযোগ কর।
+            আত্মবিশ্বাসের সাথে প্রস্তুতি নিতে যোগাযোগ কর।
           </p>
         </div>
 
@@ -265,7 +296,8 @@ const handleSubmit = async (e) => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="তোমার নাম লিখ..."
-                    className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none focus:border-cyan-400 transition"
+                    disabled={isSubmitting}
+                    className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none focus:border-cyan-400 transition disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -280,13 +312,14 @@ const handleSubmit = async (e) => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="01XXXXXXXXX"
-                    className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none focus:border-cyan-400 transition"
+                    disabled={isSubmitting}
+                    className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none focus:border-cyan-400 transition disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                 </div>
 
                 <div>
                   <label className="block text-slate-300 mb-2">
-                    তোমার  মেসেজ
+                    তোমার মেসেজ
                   </label>
 
                   <textarea
@@ -294,24 +327,45 @@ const handleSubmit = async (e) => {
                     rows="6"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="তোমার  প্রশ্ন/মেসেজ লিখ..."
-                    className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none resize-none focus:border-cyan-400 transition"
+                    placeholder="তোমার প্রশ্ন/মেসেজ লিখ..."
+                    disabled={isSubmitting}
+                    className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none resize-none focus:border-cyan-400 transition disabled:opacity-50 disabled:cursor-not-allowed"
                   ></textarea>
                 </div>
 
+                {/* Status Message with Styling */}
                 {submitStatus.text && (
-                  <p
-                    className={`text-sm font-medium ${submitStatus.type === "success" ? "text-green-400" : "text-red-400"}`}
+                  <div
+                    className={`p-4 rounded-2xl flex items-center gap-3 ${
+                      submitStatus.type === "success" 
+                        ? "bg-green-500/20 border border-green-500/30 text-green-400" 
+                        : submitStatus.type === "error"
+                        ? "bg-red-500/20 border border-red-500/30 text-red-400"
+                        : "bg-yellow-500/20 border border-yellow-500/30 text-yellow-400"
+                    }`}
                   >
-                    {submitStatus.text}
-                  </p>
+                    {submitStatus.type === "success" && <CheckCircle size={20} className="flex-shrink-0" />}
+                    {submitStatus.type === "error" && <XCircle size={20} className="flex-shrink-0" />}
+                    {submitStatus.type === "loading" && <Loader2 size={20} className="flex-shrink-0 animate-spin" />}
+                    <span className="font-medium">{submitStatus.text}</span>
+                  </div>
                 )}
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 rounded-2xl shadow-2xl transition-all duration-300"
+                  disabled={isSubmitting}
+                  className={`w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 rounded-2xl shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 ${
+                    isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
                 >
-                  মেসেজ পাঠাও 
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 size={20} className="animate-spin" />
+                      পাঠানো হচ্ছে...
+                    </>
+                  ) : (
+                    "মেসেজ পাঠাও"
+                  )}
                 </button>
               </form>
             </div>
