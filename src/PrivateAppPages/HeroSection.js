@@ -51,10 +51,12 @@ const HeroSection = () => {
 
             {/* Heading */}
             <h1 className="mt-6 text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
-              Physics,
+              এখন Physics,
               <span className="text-cyan-300"> Chemistry</span>
               <br />
-              <span className="text-yellow-300">& Math সহজ হবে</span>
+              <span className="text-pink-600"> & </span>
+              <span className="text-yellow-300"> Math-MCQ  </span>
+              <span className="text-green-300">হবে পানির মত সহজ  </span>
             </h1>
 
             {/* Description */}
@@ -64,7 +66,7 @@ const HeroSection = () => {
             </p>
 
             {/* Buttons */}
-            <div className="mt-7 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            {/* <div className="mt-7 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold px-6 py-3 rounded-2xl shadow-2xl transition duration-300">
                 ভর্তি হতে যোগাযোগ কর
               </button>
@@ -72,7 +74,7 @@ const HeroSection = () => {
               <button className="border border-white/20 bg-white/5 hover:bg-white/10 text-white px-6 py-3 rounded-2xl transition">
                 বিস্তারিত দেখ
               </button>
-            </div>
+            </div> */}
 
             {/* Info Cards */}
             <div className="grid grid-cols-2 gap-4 mt-8 md:mt-10">

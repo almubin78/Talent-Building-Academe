@@ -44,8 +44,9 @@ function PrivateApp() {
           headline='Welcome to '
           webName='Talent Building Academy'
           paragraph="পদার্থ , রসায়ন এবং গণিত MCQ এ পরিপূর্ণ প্রস্তুতির জন্য। "
-          extraMessage="ওয়েব সাইটের কাজ এখনো চলমান। জরুরী প্রয়োজনে যোগাযোগঃ 01701906543"
-          imgLink='https://i.ibb.co.com/LdPRBF5P/me4-Edited.png' 
+          extraMessage="ওয়েব সাইটের কাজ এখনো চলমান। জরুরী প্রয়োজনে যোগাযোগঃ"
+          phone='017-019-0-6543'
+          imgLink='https://i.ibb.co.com/6h2g2Nb/Almubin.png' 
           open={close}
           setOpen={setClose}
         />

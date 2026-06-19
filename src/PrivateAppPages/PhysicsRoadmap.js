@@ -1,13 +1,13 @@
 // client/src/components/PhysicsRoadmap.js
 
-import React from "react";
-import { Tab } from "@headlessui/react";
+import React, { useState } from "react";
 import {
   BookOpen,
   FlaskConical,
   Calculator,
   Clock3,
   FileCheck2,
+  ChevronDown,
 } from "lucide-react";
 
 function classNames(...classes) {
@@ -59,6 +59,14 @@ const categories = {
 };
 
 const PhysicsRoadmap = () => {
+  const [activeStep, setActiveStep] = useState(null);
+
+  // Get the current step data
+  const currentPost = activeStep ? categories[activeStep][0] : null;
+
+  // Get all step keys
+  const stepKeys = Object.keys(categories);
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 py-20 px-4">
       {/* Blur Effect */}
@@ -85,105 +93,121 @@ const PhysicsRoadmap = () => {
           </p>
         </div>
 
-        {/* Tabs */}
-        <Tab.Group>
-          <Tab.List className="flex flex-wrap gap-4 justify-center mb-10">
-            {Object.keys(categories).map((category) => (
-              <Tab
-                key={category}
-                className={({ selected }) =>
-                  classNames(
-                    "px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 outline-none",
-                    selected
-                      ? "bg-cyan-500 text-white shadow-2xl scale-105"
-                      : "bg-white/10 text-slate-300 hover:bg-white/20"
-                  )
-                }
-              >
-                {category}
-              </Tab>
-            ))}
-          </Tab.List>
+        {/* Step Buttons */}
+        <div className="flex flex-wrap gap-4 justify-center mb-10">
+          {stepKeys.map((step) => (
+            <button
+              key={step}
+              onClick={() => setActiveStep(step)}
+              className={classNames(
+                "px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 outline-none",
+                activeStep === step
+                  ? "bg-cyan-500 text-white shadow-2xl scale-105"
+                  : "bg-white/10 text-slate-300 hover:bg-white/20"
+              )}
+            >
+              {step}
+            </button>
+          ))}
+        </div>
 
-          <Tab.Panels>
-            {Object.values(categories).map((posts, idx) => (
-              <Tab.Panel key={idx}>
-                {posts.map((post) => (
-                  <div
-                    key={post.id}
-                    className="relative overflow-hidden rounded-[30px] border border-white/10 bg-white/10 backdrop-blur-xl p-8 md:p-12 shadow-2xl"
-                  >
-                    {/* Top Info */}
-                    <div className="flex flex-wrap gap-4 mb-10">
-                      <div className="bg-cyan-500/20 border border-cyan-400/20 px-5 py-3 rounded-xl text-cyan-300 font-semibold flex items-center gap-2">
-                        <Clock3 size={18} />
-                        সময়ঃ {post.duration}
-                      </div>
+        {/* Content - Only shows when a button is clicked */}
+        {activeStep && currentPost && (
+          <div className="animate-fadeIn">
+            <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-white/10 backdrop-blur-xl p-8 md:p-12 shadow-2xl">
+              {/* Top Info */}
+              <div className="flex flex-wrap gap-4 mb-10">
+                <div className="bg-cyan-500/20 border border-cyan-400/20 px-5 py-3 rounded-xl text-cyan-300 font-semibold flex items-center gap-2">
+                  <Clock3 size={18} />
+                  সময়ঃ {currentPost.duration}
+                </div>
 
-                      <div className="bg-purple-500/20 border border-purple-400/20 px-5 py-3 rounded-xl text-purple-300 font-semibold flex items-center gap-2">
-                        <FileCheck2 size={18} />
-                        {post.exam}
-                      </div>
+                <div className="bg-purple-500/20 border border-purple-400/20 px-5 py-3 rounded-xl text-purple-300 font-semibold flex items-center gap-2">
+                  <FileCheck2 size={18} />
+                  {currentPost.exam}
+                </div>
+              </div>
+
+              {/* Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Physics */}
+                <div className="bg-slate-900/50 rounded-3xl p-6 border border-cyan-500/20 hover:scale-[1.02] transition">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="bg-cyan-500/20 p-3 rounded-xl">
+                      <BookOpen className="text-cyan-400" />
                     </div>
 
-                    {/* Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {/* Physics */}
-                      <div className="bg-slate-900/50 rounded-3xl p-6 border border-cyan-500/20 hover:scale-[1.02] transition">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="bg-cyan-500/20 p-3 rounded-xl">
-                            <BookOpen className="text-cyan-400" />
-                          </div>
-
-                          <h3 className="text-2xl font-bold text-white">
-                            পদার্থবিজ্ঞান
-                          </h3>
-                        </div>
-
-                        <p className="text-slate-300 leading-relaxed">
-                          {post.physics}
-                        </p>
-                      </div>
-
-                      {/* Chemistry + Math */}
-                      <div className="bg-slate-900/50 rounded-3xl p-6 border border-purple-500/20 hover:scale-[1.02] transition">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="bg-purple-500/20 p-3 rounded-xl">
-                            <FlaskConical className="text-purple-400" />
-                          </div>
-
-                          <div className="bg-yellow-500/20 p-3 rounded-xl">
-                            <Calculator className="text-yellow-300" />
-                          </div>
-
-                          <h3 className="text-2xl font-bold text-white">
-                            রসায়ন + গণিত
-                          </h3>
-                        </div>
-
-                        <p className="text-slate-300 leading-relaxed">
-                          {post.chemistry}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Result */}
-                    <div className="mt-8 rounded-3xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/20 p-6">
-                      <h3 className="text-xl font-bold text-cyan-300 mb-3">
-                        এই ধাপ শেষে যা হবে
-                      </h3>
-
-                      <p className="text-slate-200 leading-relaxed text-lg">
-                        {post.result}
-                      </p>
-                    </div>
+                    <h3 className="text-2xl font-bold text-white">
+                      পদার্থবিজ্ঞান
+                    </h3>
                   </div>
-                ))}
-              </Tab.Panel>
-            ))}
-          </Tab.Panels>
-        </Tab.Group>
+
+                  <p className="text-slate-300 leading-relaxed">
+                    {currentPost.physics}
+                  </p>
+                </div>
+
+                {/* Chemistry + Math */}
+                <div className="bg-slate-900/50 rounded-3xl p-6 border border-purple-500/20 hover:scale-[1.02] transition">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="bg-purple-500/20 p-3 rounded-xl">
+                      <FlaskConical className="text-purple-400" />
+                    </div>
+
+                    <div className="bg-yellow-500/20 p-3 rounded-xl">
+                      <Calculator className="text-yellow-300" />
+                    </div>
+
+                    <h3 className="text-2xl font-bold text-white">
+                      রসায়ন + গণিত
+                    </h3>
+                  </div>
+
+                  <p className="text-slate-300 leading-relaxed">
+                    {currentPost.chemistry}
+                  </p>
+                </div>
+              </div>
+
+              {/* Result */}
+              <div className="mt-8 rounded-3xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/20 p-6">
+                <h3 className="text-xl font-bold text-cyan-300 mb-3">
+                  এই ধাপ শেষে যা হবে
+                </h3>
+
+                <p className="text-slate-200 leading-relaxed text-lg">
+                  {currentPost.result}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Optional: Message when no button is clicked */}
+        {!activeStep && (
+          <div className="text-center text-slate-400 py-12">
+            <p className="text-lg">বিস্তারিত দেখতে উপরে যেকোনো ধাপে ক্লিক কর </p>
+            <ChevronDown className="mx-auto mt-4 text-cyan-400 animate-bounce" size={32} />
+          </div>
+        )}
       </div>
+
+      {/* Add animation styles */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease-out forwards;
+        }
+      `}</style>
     </section>
   );
 };

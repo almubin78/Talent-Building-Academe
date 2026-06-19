@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaFacebookF,
   FaPhoneAlt,
@@ -12,6 +12,65 @@ import {
 } from "lucide-react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
+  const [submitStatus, setSubmitStatus] = useState({ type: "", text: "" });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const { name, phone, message } = formData;
+
+  if (!name.trim() || !phone.trim() || !message.trim()) {
+    return setSubmitStatus({
+      type: "error",
+      text: "অনুগ্রহ করে সব ফিল্ড পূরণ করো।",
+    });
+  }
+
+  if (!/^01\d{9}$/.test(phone.trim())) {
+    return setSubmitStatus({
+      type: "error",
+      text: "সঠিক ১১ সংখ্যার মোবাইল নম্বর দাও।",
+    });
+  }
+  console.log(formData,'formData');
+
+  try {
+    const res = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(data.message);
+
+    setSubmitStatus({
+      type: "success",
+      text: "তোমার মেসেজ পাঠানো হয়েছে।",
+    });
+
+    setFormData({
+      name: "",
+      phone: "",
+      message: "",
+    });
+  } catch (err) {
+    setSubmitStatus({
+      type: "error",
+      text: err.message || "কিছু সমস্যা হয়েছে।",
+    });
+  }
+};
+
   return (
     <section id="contact" className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 py-20 px-4">
       
@@ -58,7 +117,7 @@ const Contact = () => {
                 <div className="absolute inset-0 rounded-full bg-cyan-400 blur-2xl opacity-30"></div>
 
                 <img
-                  src="https://i.ibb.co.com/LdPRBF5P/me4-Edited.png"
+                  src="https://i.ibb.co.com/6h2g2Nb/Almubin.png"
                   alt="Profile"
                   className="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-2xl"
                 />
@@ -90,7 +149,7 @@ const Contact = () => {
 
                   <div className="text-left">
                     <h4 className="text-white font-semibold">
-                      অনার্স (পদার্থবিজ্ঞান)
+                      B.Sc (পদার্থবিজ্ঞান)
                     </h4>
 
                     <p className="text-slate-400 text-sm">
@@ -183,26 +242,29 @@ const Contact = () => {
 
                 <div>
                   <h3 className="text-3xl font-bold text-white">
-                    মেসেজ পাঠান
+                    মেসেজ পাঠাও 
                   </h3>
 
                   <p className="text-slate-400 mt-1">
-                    যেকোনো প্রশ্ন বা তথ্য জানতে যোগাযোগ করুন
+                    যেকোনো প্রশ্ন বা তথ্য জানতে যোগাযোগ কর
                   </p>
                 </div>
               </div>
 
               {/* Form */}
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
 
                 <div>
                   <label className="block text-slate-300 mb-2">
-                    আপনার নাম
+                    তোমার নাম
                   </label>
 
                   <input
                     type="text"
-                    placeholder="আপনার নাম লিখুন"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="তোমার নাম লিখ..."
                     className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none focus:border-cyan-400 transition"
                   />
                 </div>
@@ -214,6 +276,9 @@ const Contact = () => {
 
                   <input
                     type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="01XXXXXXXXX"
                     className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none focus:border-cyan-400 transition"
                   />
@@ -221,21 +286,32 @@ const Contact = () => {
 
                 <div>
                   <label className="block text-slate-300 mb-2">
-                    আপনার মেসেজ
+                    তোমার  মেসেজ
                   </label>
 
                   <textarea
+                    name="message"
                     rows="6"
-                    placeholder="আপনার প্রশ্ন লিখুন..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="তোমার  প্রশ্ন/মেসেজ লিখ..."
                     className="w-full bg-slate-900/60 border border-slate-700 text-white rounded-2xl px-5 py-4 outline-none resize-none focus:border-cyan-400 transition"
                   ></textarea>
                 </div>
+
+                {submitStatus.text && (
+                  <p
+                    className={`text-sm font-medium ${submitStatus.type === "success" ? "text-green-400" : "text-red-400"}`}
+                  >
+                    {submitStatus.text}
+                  </p>
+                )}
 
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 rounded-2xl shadow-2xl transition-all duration-300"
                 >
-                  মেসেজ পাঠান
+                  মেসেজ পাঠাও 
                 </button>
               </form>
             </div>
