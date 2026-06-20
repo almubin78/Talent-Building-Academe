@@ -235,7 +235,7 @@ export const studentsData = {
     },
     {
       id: 11,
-      name: "Atifa",
+      name: "Papri",
       batchTime: "9 am to 10 am",
       class_name: "নবম",
       imgLink: " ",
