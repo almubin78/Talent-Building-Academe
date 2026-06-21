@@ -148,15 +148,15 @@ const Contact = () => {
                 <div className="absolute inset-0 rounded-full bg-cyan-400 blur-2xl opacity-30"></div>
 
                 <img
-                  src="https://i.ibb.co.com/6h2g2Nb/Almubin.png"
+                  src="https://i.ibb.co.com/ch43C1cZ/me-Story.jpg"
                   alt="Profile"
                   className="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-2xl"
                 />
 
                 {/* Floating Tooltip */}
-                <div className="absolute top-2 left-full ml-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs md:text-sm px-4 py-3 rounded-2xl shadow-xl w-max max-w-[220px] text-left">
+                {/* <div className="absolute top-2 left-full ml-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs md:text-sm px-4 py-3 rounded-2xl shadow-xl w-max max-w-[220px] text-left">
                   কঠিন বিষয়গুলো সহজভাবে বুঝাতে ভালোবাসি।
-                </div>
+                </div> */}
 
                 {/* Online Badge */}
                 <div className="absolute bottom-3 right-3 h-5 w-5 rounded-full bg-green-400 border-2 border-white"></div>

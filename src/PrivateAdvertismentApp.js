@@ -46,7 +46,7 @@ function PrivateApp() {
           paragraph="পদার্থ , রসায়ন এবং গণিত MCQ এ পরিপূর্ণ প্রস্তুতির জন্য। "
           extraMessage="ওয়েব সাইটের কাজ এখনো চলমান। জরুরী প্রয়োজনে যোগাযোগঃ"
           phone='017-019-0-6543'
-          imgLink='https://i.ibb.co.com/6h2g2Nb/Almubin.png' 
+          imgLink='https://i.ibb.co.com/ch43C1cZ/me-Story.jpg' 
           open={close}
           setOpen={setClose}
         />
