@@ -22,6 +22,7 @@ function PrivateApp() {
     'https://i.ibb.co.com/VnPmpb4/ch-CQ.png',
     'https://i.ibb.co.com/8SDKkY9/math.png',
     'https://i.ibb.co.com/BKPDkby5/ph-MCQ.png',
+    'https://i.ibb.co.com/MxXp0G53/ch-MCQ.png',
   ];
   // const rotatingImages = [
   //   'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=150&h=150&fit=crop',
@@ -56,16 +57,16 @@ function PrivateApp() {
       <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">
-            Our Gallery
+            টার্গেট অর্জনের পথে আমাদের যাত্রা
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Explore our journey through these memorable moments
+            
           </p>
           <RotatingImageCircle
             images={rotatingImages}
             radius={220}
             rotationSpeed={15}
-            imageSize={150}
+            imageSize={100}
             centerContent={
               <div className="text-center">
                 <span className="block text-lg font-bold text-blue-600">Science</span>
