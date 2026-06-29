@@ -205,7 +205,7 @@ export const studentsData = {
     },
     {
       id: 8,
-      name: "Faruk",
+      name: "Umar Faruk",
       batchTime: "9 am to 10 am",
       class_name: "নবম",
       imgLink: " ",
@@ -275,7 +275,7 @@ export const studentsData = {
     },
     {
       id: 15,
-      name: "Umar Faruk",
+      name: "Umar Akmol",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
       imgLink: " ",
@@ -305,10 +305,20 @@ export const studentsData = {
     },
     {
       id: 18,
-      name: "Unnamed",
+      name: "Robbani",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
-      imgLink: " ",
+      imgLink: "",
+      joinYear: "২০২৬-জুন",
+      subject: "পদার্থ, রসায়ন & গণিত- MCQ",
+      institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
+    },
+    {
+      id: 19,
+      name: "Rifat",
+      batchTime: "3:30 pm to 4:30 pm",
+      class_name: "নবম",
+      imgLink: "",
       joinYear: "২০২৬-জুন",
       subject: "পদার্থ, রসায়ন & গণিত- MCQ",
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
@@ -349,13 +359,13 @@ export const studentsData = {
     },
     {
       id: 4,
-      name: "Bonna",
+      name: "Ayesha",
       batchTime: "4:45 pm to 5:45 pm",
       class_name: "অষ্টম",
       imgLink: "",
-      joinYear: "2025 -শ্রেনি-৭ম",
+      joinYear: "2026-জুন ",
       subject: "গণিত, বিজ্ঞান,গ্রামার",
-      institutionName: "পশ্চিম পগইল দাখিল মাদ্রাসা",
+      institutionName: "আলোর মেলা শিশু নিকেতন।",
     },
     {
       id: 5,
@@ -537,14 +547,22 @@ export const PreviousStudentsData = {
     },
     {
       id: 7,
-      name: "Bayezid",
-      batchTime: "5:45 pm to 6:45 pm",     
+      name: "Bayezid",   
       batch: "অষ্টম",
       imgLink: "https://i.ibb.co.com/YBVN55ph/bayzid8.jpg",
       joinYear: "2025 -শ্রেনি-৭ম",
       subject: "গণিত, বিজ্ঞান,গ্রামার",
       institutionName: "নাকাই হাট দ্বি-মুখী মাধ্যমিক বিদ্যালয়।",
     },
+    {
+      id: 4,
+      name: "Bonna",
+      batch: "অষ্টম",
+      imgLink: "",
+      joinYear: "2025 -শ্রেনি-৭ম",
+      subject: "গণিত, বিজ্ঞান,গ্রামার",
+      institutionName: "পশ্চিম পগইল দাখিল মাদ্রাসা",
+    }
   ],
   
 };

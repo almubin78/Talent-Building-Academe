@@ -135,7 +135,7 @@ const PreviousStudents = () => {
                       <img
                         src={
                           student.imgLink?.trim()
-                            ? student.imgLink
+                            ? student?.imgLink
                             : "https://i.ibb.co.com/LzN9NS0z/default.png"
                         }
                         alt={student.name}
