@@ -21,19 +21,13 @@ function PrivateApp() {
     'https://i.ibb.co.com/gF9qPk6Q/ph-CQ.png',
     'https://i.ibb.co.com/VnPmpb4/ch-CQ.png',
     'https://i.ibb.co.com/8SDKkY9/math.png',
+    'https://i.ibb.co.com/WvwNF1Sx/Science-Class-Eight.png',
+    
     'https://i.ibb.co.com/BKPDkby5/ph-MCQ.png',
     'https://i.ibb.co.com/MxXp0G53/ch-MCQ.png',
+    'https://i.ibb.co.com/Lz1NkpCH/Class-Eight-Math.png',
   ];
-  // const rotatingImages = [
-  //   'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=150&h=150&fit=crop',
-  //   'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=150&h=150&fit=crop',
-  //   'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=150&h=150&fit=crop',
-  //   'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=150&h=150&fit=crop',
-  //   'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=150&h=150&fit=crop',
-  //   'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=150&h=150&fit=crop',
-  //   'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=150&h=150&fit=crop',
-  //   'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=150&h=150&fit=crop',
-  // ];
+ 
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -54,10 +48,10 @@ function PrivateApp() {
       </div>
 
       {/* Add the Rotating Image Circle Section */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gradient-to-b from-blue-500 to-white">
+        <div className="container mx-auto px-4 ">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">
-            টার্গেট অর্জনের পথে আমাদের যাত্রা
+            যে বিষয়গুলো নিয়ে আমি কাজ করি
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             
@@ -68,9 +62,9 @@ function PrivateApp() {
             rotationSpeed={15}
             imageSize={100}
             centerContent={
-              <div className="text-center">
-                <span className="block text-lg font-bold text-blue-600">Science</span>
-                <span className="text-xs text-gray-500">Family</span>
+              <div className="text-center p-5 bg-red-100 rounded-full shadow-lg">
+                <span className="block text-lg font-bold text-blue-600 ">Subjects = Easy</span>
+                {/* <span className="text-xs text-gray-500">Family</span> */}
               </div>
             }
           />

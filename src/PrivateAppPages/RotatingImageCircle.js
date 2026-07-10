@@ -1,5 +1,5 @@
 // client/src/components/RotatingImageCircle.jsx
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
 const RotatingImageCircle = ({
   images = [],
@@ -10,43 +10,27 @@ const RotatingImageCircle = ({
   className = '',
 }) => {
   const [angle, setAngle] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect mobile screen
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Adjust sizes for mobile
-  const mobileRadius = isMobile ? Math.min(radius * 0.65, 140) : radius;
-  const mobileImageSize = isMobile ? Math.min(imageSize * 0.7, 55) : imageSize;
-  const mobileRotationSpeed = isMobile ? rotationSpeed * 0.8 : rotationSpeed;
 
   useEffect(() => {
     if (images.length === 0) return;
 
     const interval = setInterval(() => {
       setAngle((prevAngle) => {
-        const newAngle = prevAngle + 0.3;
+        const newAngle = prevAngle + 0.3; // Smaller increment for smoother animation
         return newAngle % 360;
       });
-    }, 30);
+    }, 30); // Update every 30ms for smoother motion
 
     return () => clearInterval(interval);
   }, [images.length]);
 
+  // Memoize display images to prevent recalculation
   const displayImages = useMemo(() => {
     if (images.length === 0) return [];
     return images.length < 4 ? [...images, ...images, ...images, ...images] : images;
   }, [images]);
 
+  // Memoize the position calculations
   const imagePositions = useMemo(() => {
     const total = displayImages.length;
     if (total === 0) return [];
@@ -60,12 +44,12 @@ const RotatingImageCircle = ({
         src,
         index,
         imageAngle,
-        x: mobileRadius + mobileRadius * Math.cos(radian) - mobileImageSize / 2,
-        y: mobileRadius + mobileRadius * Math.sin(radian) - mobileImageSize / 2,
+        x: radius + radius * Math.cos(radian) - imageSize / 2,
+        y: radius + radius * Math.sin(radian) - imageSize / 2,
         rotateAngle: imageAngle,
       };
     });
-  }, [displayImages, angle, mobileRadius, mobileImageSize]);
+  }, [displayImages, angle, radius, imageSize]);
 
   if (images.length === 0) {
     return (
@@ -76,12 +60,13 @@ const RotatingImageCircle = ({
   }
 
   return (
-    <div className={`relative flex items-center justify-center w-full h-full ${className}`}>
+    <div className={`relative flex items-center justify-center w-full h-full min-h-[400px] ${className}`}>
+      {/* py-16 bg-gradient-to-b from-blue-50 to-white */}
       <div 
         className="relative" 
         style={{ 
-          width: mobileRadius * 2, 
-          height: mobileRadius * 2,
+          width: radius * 2, 
+          height: radius * 2,
           maxWidth: '100%',
           maxHeight: '100%'
         }}
@@ -91,15 +76,15 @@ const RotatingImageCircle = ({
             key={`${index}-${src}`}
             className="absolute rounded-full overflow-hidden shadow-lg border-2 border-white transition-none hover:scale-110 hover:z-10 hover:shadow-2xl"
             style={{
-              width: mobileImageSize,
-              height: mobileImageSize,
+              width: imageSize,
+              height: imageSize,
               left: x,
               top: y,
               transform: `rotate(${rotateAngle}deg)`,
-              boxShadow: '0 4px 15px rgba(0,0,0,0.12)',
+              boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
               cursor: 'pointer',
               backgroundColor: '#f0f0f0',
-              willChange: 'transform, left, top',
+              willChange: 'transform, left, top', // Optimize for animations
             }}
           >
             <img
@@ -109,8 +94,8 @@ const RotatingImageCircle = ({
               style={{ 
                 objectFit: 'contain',
                 transform: `rotate(${-rotateAngle}deg)`,
-                padding: isMobile ? '2px' : '3px',
-                pointerEvents: 'none',
+                padding: '3px',
+                pointerEvents: 'none', // Prevent image from capturing mouse events
               }}
               loading="lazy"
               onError={(e) => {
@@ -124,16 +109,16 @@ const RotatingImageCircle = ({
         <div
           className="absolute rounded-full bg-white shadow-xl flex items-center justify-center border-2 border-gray-100"
           style={{
-            width: mobileImageSize * 0.9,
-            height: mobileImageSize * 0.9,
-            left: mobileRadius - (mobileImageSize * 0.9) / 2,
-            top: mobileRadius - (mobileImageSize * 0.9) / 2,
+            width: imageSize * 0.9,
+            height: imageSize * 0.9,
+            left: radius - (imageSize * 0.9) / 2,
+            top: radius - (imageSize * 0.9) / 2,
             zIndex: 5,
-            pointerEvents: 'none',
+            pointerEvents: 'none', // Prevent interaction with center
           }}
         >
           {centerContent || (
-            <span className={`text-center px-2 ${isMobile ? 'text-xs' : 'text-sm'} font-semibold text-gray-700`}>
+            <span className="text-sm font-semibold text-gray-700 text-center px-2">
               {images.length} Images
             </span>
           )}

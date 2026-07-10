@@ -186,7 +186,7 @@ const PhysicsRoadmap = () => {
         {/* Optional: Message when no button is clicked */}
         {!activeStep && (
           <div className="text-center text-slate-400 py-12">
-            <p className="text-lg">বিস্তারিত দেখতে উপরে যেকোনো ধাপে ক্লিক কর </p>
+            <p className="text-lg">বিস্তারিত দেখতে <span  className="rounded text-cyan-400 text-decoration-underline text-xl border border-cyan-400">☝☝ উপরে ☝☝</span> যেকোনো ধাপে ক্লিক কর </p>
             <ChevronDown className="mx-auto mt-4 text-cyan-400 animate-bounce" size={32} />
           </div>
         )}
