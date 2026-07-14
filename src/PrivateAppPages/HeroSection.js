@@ -18,19 +18,19 @@ const HeroSection = () => {
 
   const slides = [
     {
-      title: "পদার্থ বিজ্ঞান সমস্যা?",
+      title: "পদার্থ বিজ্ঞান ",
       description:
         "পদার্থ বিজ্ঞান জানার ইচ্ছা প্রচুর-  কিন্তু কিভাবে কোথায় থেকে শুরু করব?  কোন অংশের পর কোন অংশ করব? সূত্র মুখস্থ রাখি কিন্তু কোন সূত্র কোথায় কিভাবে প্রয়োগ করব?  — এইসব প্রশ্ন যদি মনে ঘুরপাক খায় তবে সাহায্য নিতে পার।",
     },
     {
-      title: "রসায়ন মাথায় ঢুকেনা? ",
+      title: "রসায়ন",
       description:
         "এই বিষয়টি বেশিরভাগই মুখস্থ বিদ্যার উপর নির্ভরশীল। তবে প্রশ্নসমূহ বিশ্লেষণ করে একটি সাধারণ কিন্তু দুর্দান্ত ফর্মুলা অনুসরন করে বিভিন্ন কৌশলের ভিত্তিতে রসায়ন আয়ত্বে নেয়া যায়। ",
     },
     {
       title: "গণিত MCQ",
       description:
-        "৯৫% শিক্ষার্থী গনিতের লিখিত অংশে ভাল করলেও এই MCQ অংশে এসে অনেকটাই চিন্তিত হয়ে পড়ে। বিজ্ঞান বিভাগের শিক্ষার্থীদের এই MCQ নিয়ে সমস্যা সমাধান থাকছে বোনাস হিসেবে। ",
+        " শিক্ষার্থীদের একটা বড় অংশ যারা গনিতের লিখিত অংশে ভাল করলেও এই MCQ অংশে এসে অনেকটাই চিন্তিত হয়ে পড়ে। বিজ্ঞান বিভাগের শিক্ষার্থীদের এই MCQ নিয়ে সমস্যা সমাধান থাকছে বোনাস হিসেবে। ",
     },
   ];
 
@@ -51,17 +51,18 @@ const HeroSection = () => {
 
             {/* Heading */}
             <h1 className="mt-6 text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
-              এখন Physics,
+               Physics,
               <span className="text-cyan-300"> Chemistry</span>
               <br />
               <span className="text-pink-600"> & </span>
               <span className="text-yellow-300"> Math-MCQ  </span>
-              <span className="text-green-300">হবে পানির মত সহজ  </span>
+              <span className="text-pink-300"> হবে  </span>
+              <span className="text-green-300"> সহজ, সরল এবং সিম্পল  </span>
             </h1>
 
             {/* Description */}
             <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              কঠিন বিষয়গুলো সহজভাবে বুঝিয়ে MCQ ভিত্তিক প্রস্তুতির মাধ্যমে
+              কঠিন বিষয়গুলো ব্যাপক প্রস্তুতির মাধ্যমে
               শিক্ষার্থীদের আত্মবিশ্বাসী করে তোলা হয়।
             </p>
 
@@ -80,7 +81,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-2 gap-4 mt-8 md:mt-10">
               <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-4 md:p-6">
                 <h3 className="text-2xl md:text-4xl font-extrabold text-yellow-300">
-                  ১৪
+                  ১৫
                 </h3>
 
                 <p className="text-xs md:text-sm text-slate-300 mt-2 leading-relaxed">
@@ -90,7 +91,7 @@ const HeroSection = () => {
 
               <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-4 md:p-6">
                 <h3 className="text-2xl md:text-4xl font-extrabold text-cyan-300">
-                  ৮৫%+
+                  ৯০%+
                 </h3>
 
                 <p className="text-xs md:text-sm text-slate-300 mt-2 leading-relaxed">
@@ -105,7 +106,7 @@ const HeroSection = () => {
             {/* Outer Glow */}
             <div className="absolute inset-0 bg-cyan-500/10 blur-3xl rounded-full"></div>
 
-            <div className="relative bg-white/10 backdrop-blur-2xl border border-white/10 rounded-[30px] p-3 md:p-6 shadow-2xl">
+            <div className="relative bg-white/10 backdrop-blur-2xl border border-pink/10 rounded-[30px] p-3 md:p-6 shadow-2xl">
               <Slider {...sliderSettings}>
                 {slides.map((slide, index) => (
                   <div key={index}>
@@ -118,7 +119,7 @@ const HeroSection = () => {
                       </div>
 
                       {/* Title */}
-                      <h2 className="text-2xl md:text-4xl font-extrabold text-gray-800 leading-snug">
+                      <h2 className="text-2xl md:text-4xl font-extrabold text-pink-800 leading-snug border-b-2 border-pink-200 pb-2 md:pb-3">
                         {slide.title}
                       </h2>
 
@@ -130,7 +131,7 @@ const HeroSection = () => {
                       {/* Button */}
                       <div className="mt-7">
                         <button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-500 hover:to-cyan-400 text-white px-6 py-3 rounded-2xl font-semibold transition shadow-lg">
-                          যোগাযোগ: <span className="text-pink-300 font-mono text-lg">017-019-06543</span>  
+                          যোগাযোগ-  <span className=" text-bold font-mono text-xl">  017 019 0 6543</span>  
                         </button>
                       </div>
                     </div>

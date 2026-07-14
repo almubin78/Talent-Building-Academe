@@ -67,7 +67,7 @@ const RotatingImageCircle = ({
         style={{ 
           width: radius * 2, 
           height: radius * 2,
-          maxWidth: '100%',
+          maxWidth: '90%',
           maxHeight: '100%'
         }}
       >

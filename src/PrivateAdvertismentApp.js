@@ -11,7 +11,7 @@ import Popup from "./PrivateAppPages/Popup";
 import Header from "./PrivateAppPages/Header";
 
 import { useState } from "react";
-import RotatingImageCircle from "./PrivateAppPages/RotatingImageCircle";
+// import RotatingImageCircle from "./PrivateAppPages/RotatingImageCircle";
 
 function PrivateApp() {
   const [close, setClose] = useState(true);
@@ -39,7 +39,7 @@ function PrivateApp() {
           webName="Talent Building Academy"
           paragraph="পদার্থ , রসায়ন এবং গণিত MCQ এ পরিপূর্ণ প্রস্তুতির জন্য। "
           extraMessage="ওয়েব সাইটের কাজ এখনো চলমান। জরুরী প্রয়োজনে যোগাযোগঃ"
-          phone="017-019-0-6543"
+          phone="017 019 0 6543"
           imgLink="https://i.ibb.co.com/ch43C1cZ/me-Story.jpg"
           open={close}
           setOpen={setClose}
@@ -48,7 +48,7 @@ function PrivateApp() {
       </div>
 
       {/* Add the Rotating Image Circle Section */}
-      <section className="py-16 bg-gradient-to-b from-blue-500 to-white">
+      {/* <section className="py-16 bg-gradient-to-b from-blue-500 to-white">
         <div className="container mx-auto px-4 ">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">
             যে বিষয়গুলো নিয়ে আমি কাজ করি
@@ -56,20 +56,9 @@ function PrivateApp() {
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             
           </p>
-          <RotatingImageCircle
-            images={rotatingImages}
-            radius={220}
-            rotationSpeed={15}
-            imageSize={100}
-            centerContent={
-              <div className="text-center p-5 bg-red-100 rounded-full shadow-lg">
-                <span className="block text-lg font-bold text-blue-600 ">Subjects = Easy</span>
-                {/* <span className="text-xs text-gray-500">Family</span> */}
-              </div>
-            }
-          />
+          
         </div>
-      </section>
+      </section> */}
 
       <Sutdents />
       <PreviousStudents />

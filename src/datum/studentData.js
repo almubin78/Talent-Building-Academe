@@ -7,7 +7,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "https://i.ibb.co/tD1gX3b/kousik.png",
       joinYear: "2024-৮ম শ্রেণি",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "সাকসেস মডেল স্কুল (নতুন) ",
     },
 
@@ -18,7 +18,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/jPPGcs4C/mursalin.jpg",
       joinYear: "2024-৮ম শ্রেণি",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "সাকসেস মডেল স্কুল (নতুন) ",
     },
     {
@@ -28,7 +28,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "",
       joinYear: "2024-৮ম শ্রেণি",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "সাকসেস মডেল স্কুল (নতুন)",
     },
     {
@@ -38,7 +38,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/ynXnSZN/mottalib.jpg",
       joinYear: "2024-৮ম শ্রেণি",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "সাকসেস মডেল স্কুল (নতুন)",
     },
     {
@@ -48,7 +48,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/WN4SLp4j/souib.jpg",
       joinYear: "2024-৮ম শ্রেণি",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "সাকসেস মডেল স্কুল (নতুন)",
     },
     {
@@ -58,7 +58,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/rR66x3gH/murad9.jpg",
       joinYear: "2024-৮ম শ্রেণি",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "সাকসেস মডেল স্কুল (নতুন)",
     },
     {
@@ -68,7 +68,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/nqYH65R5/ridoy.jpg",
       joinYear: "2024-৮ম শ্রেণি",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "ক্রোড় গাছা উচ্চ বিদ্যালয়। ",
     },
     {
@@ -78,7 +78,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/LdVgrbhS/imran-10.jpg",
       joinYear: "2026-April",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
     },
     {
@@ -88,7 +88,7 @@ export const studentsData = {
       class_name: "দশম",
       imgLink: "https://i.ibb.co.com/Xkz5KKHL/Rohman10.jpg",
       joinYear: "2026-April",
-      subject: "Physics,Chemistry",
+      subject: "Physics,Chemistry & Math-MCQ",
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
     },
     {
@@ -121,7 +121,16 @@ export const studentsData = {
       subject: "Physics, Chemistry, Math MCQ",
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
     },
-    
+      {
+      id: 13,
+      name: "Siam",
+      batchTime: "8 am to 9 am",
+      class_name: "দশম",
+      imgLink: "",
+      joinYear: "2026-July",
+      subject: "Physics, Chemistry, Math MCQ",
+      institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
+    },
     {
       id: 14,
       name: "Sathi",
@@ -152,18 +161,9 @@ export const studentsData = {
       subject: "Physics, Chemistry, Math-MCQ",
       institutionName: "নাকাইহাট গার্লস স্কুল এন্ড কলেজ।",
     },
+  
     {
-      id: 12,
-      name: "Siam",
-      batchTime: "8 am to 9 am",
-      class_name: "দশম",
-      imgLink: "",
-      joinYear: "2026-July",
-      subject: "Physics, Chemistry, Math MCQ",
-      institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
-    },
-    {
-      id: 12,
+      id: 17,
       name: "Nihad",
       batchTime: "8 am to 9 am",
       class_name: "দশম",
@@ -173,7 +173,7 @@ export const studentsData = {
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
     },
     {
-      id: 12,
+      id: 18,
       name: "Kawsar",
       batchTime: "8 am to 9 am",
       class_name: "দশম",
@@ -183,7 +183,7 @@ export const studentsData = {
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)",
     },
     {
-      id: 12,
+      id: 19,
       name: "Mizan",
       batchTime: "8 am to 9 am",
       class_name: "দশম",
@@ -296,18 +296,18 @@ export const studentsData = {
       subject: "পদার্থ, রসায়ন & গণিত- MCQ",
       institutionName: "নাকাইহাট গার্লস স্কুল  এন্ড কলেজ।",
     },
+    // {
+    //   id: 11,
+    //   name: "Aysha",
+    //   batchTime: "9 am to 10 am",
+    //   class_name: "নবম",
+    //   imgLink: " ",
+    //   joinYear: "২০২৬-জুন",
+    //   subject: "পদার্থ, রসায়ন & গণিত- MCQ",
+    //   institutionName: "নাকাইহাট গার্লস স্কুল  এন্ড কলেজ।",
+    // },
     {
       id: 11,
-      name: "Aysha",
-      batchTime: "9 am to 10 am",
-      class_name: "নবম",
-      imgLink: " ",
-      joinYear: "২০২৬-জুন",
-      subject: "পদার্থ, রসায়ন & গণিত- MCQ",
-      institutionName: "নাকাইহাট গার্লস স্কুল  এন্ড কলেজ।",
-    },
-    {
-      id: 13,
       name: "Nirob",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
@@ -317,7 +317,7 @@ export const studentsData = {
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
     },
     {
-      id: 14,
+      id: 12,
       name: "Umme Hani",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
@@ -327,7 +327,7 @@ export const studentsData = {
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
     },
     {
-      id: 15,
+      id: 13,
       name: "Umar Akmol",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
@@ -337,7 +337,7 @@ export const studentsData = {
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
     },
     {
-      id: 16,
+      id: 14,
       name: "Jannti",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
@@ -347,7 +347,7 @@ export const studentsData = {
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
     },
     {
-      id: 17,
+      id: 15,
       name: "Tafhimul",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
@@ -357,7 +357,7 @@ export const studentsData = {
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
     },
     {
-      id: 18,
+      id: 16,
       name: "Robbani",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
@@ -367,7 +367,7 @@ export const studentsData = {
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
     },
     {
-      id: 19,
+      id: 17,
       name: "Rifat",
       batchTime: "3:30 pm to 4:30 pm",
       class_name: "নবম",
@@ -376,16 +376,16 @@ export const studentsData = {
       subject: "পদার্থ, রসায়ন & গণিত- MCQ",
       institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
     },
-    {
-      id: 19,
-      name: "Toufik",
-      batchTime: "3:30 pm to 4:30 pm",
-      class_name: "নবম",
-      imgLink: "",
-      joinYear: "২০২৬-February",
-      subject: "পদার্থ, রসায়ন & গণিত- MCQ",
-      institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
-    },
+    // {
+    //   id: 19,
+    //   name: "Toufik",
+    //   batchTime: "3:30 pm to 4:30 pm",
+    //   class_name: "নবম",
+    //   imgLink: "",
+    //   joinYear: "২০২৬-February",
+    //   subject: "পদার্থ, রসায়ন & গণিত- MCQ",
+    //   institutionName: "সাকসেস মডেল স্কুল (পুরাতন)।",
+    // },
     
     
   ],
@@ -662,15 +662,15 @@ export const PreviousStudentsData = {
       institutionName: "SKS School and Collage",
     },
     
-    {
-      id: 4,
-      name: "Bonna",
-      batch: "অষ্টম",
-      imgLink: "",
-      joinYear: "2025 -শ্রেনি-৭ম",
-      subject: "গণিত, বিজ্ঞান,গ্রামার",
-      institutionName: "পশ্চিম পগইল দাখিল মাদ্রাসা",
-    }
+    // {
+    //   id: 4,
+    //   name: "Bonna",
+    //   batch: "অষ্টম",
+    //   imgLink: "",
+    //   joinYear: "2025 -শ্রেনি-৭ম",
+    //   subject: "গণিত, বিজ্ঞান,গ্রামার",
+    //   institutionName: "পশ্চিম পগইল দাখিল মাদ্রাসা",
+    // }
   ],
   
 };

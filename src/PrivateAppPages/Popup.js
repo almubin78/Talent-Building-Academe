@@ -37,7 +37,9 @@ const Popup = ({
           <div className="border-t-2 border-gray-300 my-4">
             <p className="mt-2 text-gray-600 text-xl ">{extraMessage}</p>
           </div>
-          <h4 className="text-green-700 font-bold">017-019-0-6543</h4>
+          <h4 className="text-yellow-700 font-bold text-xl border-b-2  border-t-2  border-yellow-500">
+            017 019 0 6543
+          </h4>
           {/* <button id="contact" className="mt-6 rounded-lg bg-blue-600 px-5 py-3 text-white hover:bg-blue-700 transition">
             Contact Now
           </button> */}

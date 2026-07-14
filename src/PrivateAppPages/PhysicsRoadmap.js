@@ -88,8 +88,8 @@ const PhysicsRoadmap = () => {
           </h1>
 
           <p className="mt-6 text-slate-300 max-w-3xl mx-auto leading-relaxed text-lg">
-            এমনভাবে কোর্স সাজানো হয়েছে যাতে শিক্ষার্থীরা চাপ ছাড়াই
-            ধীরে ধীরে ব্যাসিক থেকে বোর্ড প্রশ্ন পর্যন্ত দক্ষতা অর্জন করতে পারে।
+            এমনভাবে কোর্স সাজানো হয়েছে যাতে শিক্ষার্থীরা <span className="text-lg text-yellow-400"> চাপ ছাড়াই </span>
+            ধীরে ধীরে <span className="text-lg text-yellow-400">  ব্যাসিক থেকে শুরু করে বোর্ড প্রশ্ন সমাধানে </span> দক্ষতা অর্জন করতে পারে।
           </p>
         </div>
 
@@ -186,7 +186,7 @@ const PhysicsRoadmap = () => {
         {/* Optional: Message when no button is clicked */}
         {!activeStep && (
           <div className="text-center text-slate-400 py-12">
-            <p className="text-lg">বিস্তারিত দেখতে <span  className="rounded text-cyan-400 text-decoration-underline text-xl border border-cyan-400">☝☝ উপরে ☝☝</span> যেকোনো ধাপে ক্লিক কর </p>
+            <p className="text-lg">বিস্তারিত দেখতে <span  className="rounded text-cyan-200  text-xl border border-gray-400 px-2">☝☝ উপরের ☝☝</span> যেকোনো ধাপে ক্লিক কর </p>
             <ChevronDown className="mx-auto mt-4 text-cyan-400 animate-bounce" size={32} />
           </div>
         )}

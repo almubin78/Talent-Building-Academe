@@ -83,9 +83,9 @@ const Contact = () => {
       setIsSubmitting(false);
 
       // Auto-clear success message after 6 seconds
-      setTimeout(() => {
-        setSubmitStatus({ type: "", text: "" });
-      }, 6000);
+      // setTimeout(() => {
+      //   setSubmitStatus({ type: "", text: "মেসেজ সেকশন ব্যবহার করার জন্য ধন্যবাদ!" });
+      // }, 6000);
 
     } catch (err) {
       setSubmitStatus({
@@ -189,7 +189,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-4">
+                {/* <div className="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-4">
                   <div className="bg-yellow-500/20 p-3 rounded-xl">
                     <BookOpen className="text-yellow-300" />
                   </div>
@@ -203,7 +203,7 @@ const Contact = () => {
                       MERN Stack Enthusiast
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Contact Info */}
@@ -221,7 +221,7 @@ const Contact = () => {
                     </p>
 
                     <h4 className="text-white font-semibold">
-                      01701906543
+                      017 019 0 6543
                     </h4>
                   </div>
                 </div>
@@ -237,7 +237,7 @@ const Contact = () => {
                       ইমেইল
                     </p>
 
-                    <h4 className="text-white font-semibold break-all">
+                    <h4 className="text-white font-semibold font-mono break-all">
                       almubin78@gmail.com
                     </h4>
                   </div>
